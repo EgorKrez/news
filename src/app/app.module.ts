@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { OpenNewsComponent } from './news/open-news/open-news.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,13 +24,14 @@ import { OpenNewsComponent } from './news/open-news/open-news.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     RouterModule,
     RouterModule.forRoot([
       { path: '', redirectTo: 'login', pathMatch: 'full' },
       { path: 'login', component: LoginComponent },
       { path: 'news-list', component: NewsListComponent },
       { path: 'open-news', component: OpenNewsComponent },
-]),
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent]
