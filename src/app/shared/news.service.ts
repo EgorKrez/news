@@ -16,6 +16,13 @@ export interface News {
   publishedAt: Date;
   content: string;
 }
+export interface Todo {
+  id: number;
+  title: string;
+  completed: boolean;
+  date?: any;
+}
+
 
 @Injectable({
   providedIn: 'root'
@@ -25,11 +32,16 @@ export class NewsService {
   constructor(public http: HttpClient) { }
 
   public news: News[];
-
+  public todos: Todo[];
   getNews(): Observable<News[]> {
+    console.log('getNews');
     return this.http.get<News[]>('.app/data.json')
     .pipe(tap(news => this.news = news));
   }
 
+  /* fetchTodos(): Observable<Todo[]> {
+    return this.http.get<Todo[]>('https://jsonplaceholder.typicode.com/todos?_limit=3')
+    .pipe(tap(todos => this.todos = todos));
+  } */
 
 }

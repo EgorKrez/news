@@ -10,6 +10,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { OpenNewsComponent } from './news/open-news/open-news.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthGuard } from './shared/auth-guard';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -28,9 +30,10 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule,
     RouterModule.forRoot([
       { path: '', redirectTo: 'login', pathMatch: 'full' },
-      { path: 'login', component: LoginComponent },
-      { path: 'news-list', component: NewsListComponent },
-      { path: 'open-news', component: OpenNewsComponent },
+      { path: 'login', component: LoginComponent, canActivate: [AuthGuard] },
+      { path: 'news-list', component: NewsListComponent, canActivate: [AuthGuard] },
+      { path: 'open-news', component: OpenNewsComponent, canActivate: [AuthGuard] },
+      { path: '**', component: NotFoundComponent},
     ]),
   ],
   providers: [],
