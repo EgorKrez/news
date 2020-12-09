@@ -1,1 +1,31 @@
-<p>news-list works!</p>
+<div class="content">
+    <header>
+        <h1 *ngIf="!isShowFavorites" (click)="showFavorites()">Favorites</h1>
+        <h1 *ngIf="isShowFavorites" (click)="showFavorites()">All news</h1>
+        <button (click)="logOut()">Log Out</button>
+    </header>
+</div>
+<div *ngIf="!isShowFavorites">
+    <div *ngFor="let item of p">
+        <app-news [id]='item.source.id' [name]='item.source.name' [author]='item.author' [title]='item.title'
+            [description]='item.description' [isFavorite]='item.isFavorite' [urlToImage]='item.urlToImage'
+            [publishedAt]='item.publishedAt' [content]='item.content'>
+        </app-news>
+    </div>
+</div>
+
+<div *ngIf="isShowFavorites">
+    <div *ngFor="let item of p">
+        <app-news *ngIf='item.isFavorite === true' [id]='item.source.id' [name]='item.source.name'
+            [author]='item.author' [title]='item.title' [description]='item.description' [isFavorite]='item.isFavorite'
+            [urlToImage]='item.urlToImage' [publishedAt]='item.publishedAt' [content]='item.content'>
+        </app-news>
+    </div>
+    <div class="noNews" *ngIf="!ifFavorites()">
+        <h1>You have no favorites!</h1>
+    </div>
+</div>
+
+<div class="noNews" *ngIf='p.length == 0'>
+    <h1>You have no news!</h1>
+</div>

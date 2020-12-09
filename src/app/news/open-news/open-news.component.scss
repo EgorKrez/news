@@ -6,7 +6,7 @@
     align-items: center;
 }
 .post {
-    height: 850px;
+    height: 1150px;
     width: 800px;
     margin-top: 30px;
     border: 2px solid silver;
@@ -39,18 +39,19 @@ img {
 img:hover {
     cursor: pointer;
 }
-.description {
-    height: 100px;
+.content-block {
+    height: 400px;
     width: 100%;
     text-align: center;
     border-bottom: 2px solid silver;
+    overflow: auto;
 }
 footer {
     height: 30px;
     width: 100%;
     margin: 30px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 footer button {
@@ -59,4 +60,15 @@ footer button {
 }
 footer button:hover {
     cursor: pointer;
+}
+.button-block {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-block button{
+    height: 30px;
+    width: 200px;
 }

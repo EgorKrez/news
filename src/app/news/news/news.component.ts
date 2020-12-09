@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { NewsService } from 'src/app/shared/news.service';
+import { AuthService } from 'src/app/shared/auth.service';
 
 @Component({
   selector: 'app-news',
@@ -6,10 +8,35 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./news.component.scss']
 })
 export class NewsComponent implements OnInit {
+  @Input() id: number;
+  @Input() name: string;
+  @Input() author: string;
+  @Input() title: string;
+  @Input() description: string;
+  @Input() isFavorite: boolean;
+  @Input() urlToImage: string;
+  @Input() publishedAt: string;
+  @Input() content: string;
 
-  constructor() { }
+
+  constructor(public newsService: NewsService, public authService: AuthService) { }
 
   ngOnInit(): void {
+  }
+
+  addToFavorites(): void {
+    this.newsService.news[this.id - 1].isFavorite = !this.newsService.news[this.id - 1].isFavorite;
+  }
+
+  openNews(id): void {
+    this.authService.openNews(id);
+  }
+
+  removeNews(id): void {
+    this.newsService.news.splice(id - 1, 1);
+    for (let i = id - 1; i < this.newsService.news.length; i++) {
+    this.newsService.news[i].source.id = this.newsService.news[i].source.id - 1;
+    }
   }
 
 }

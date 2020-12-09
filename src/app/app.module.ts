@@ -8,13 +8,15 @@ import { NewsComponent } from './news/news/news.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { OpenNewsComponent } from './news/open-news/open-news.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewsListComponent,
     NewsComponent,
-    LoginComponent
+    LoginComponent,
+    OpenNewsComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +28,7 @@ import { RouterModule } from '@angular/router';
       { path: '', redirectTo: 'login', pathMatch: 'full' },
       { path: 'login', component: LoginComponent },
       { path: 'news-list', component: NewsListComponent },
+      { path: 'open-news', component: OpenNewsComponent },
 ]),
   ],
   providers: [],

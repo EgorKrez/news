@@ -1,19 +1,19 @@
 <div class="content">
     <div class="container">
         <h1>My test news application</h1>
-         <form class="ng-pristine ng-untouched ng-valid" novalidate #myForm="ngForm" [formGroup]="addForm" 
+        <form class="ng-pristine ng-untouched ng-valid" novalidate #myForm="ngForm" [formGroup]="addForm"
             (ngSubmit)="Login()">
             <div class="form-group">
                 <h4>Login</h4>
                 <input type="text" placeholder="Login" class="form-control" formControlName="login" [(ngModel)]="login"
-                    required minlength="5">
+                    required minlength="4" required>
             </div>
             <div class="form-group">
                 <h4>Password</h4>
                 <input type="password" placeholder="Password" class="form-control" formControlName="password"
-                    [(ngModel)]="password" required minlength="5">
+                    [(ngModel)]="password" required minlength="4" required >
             </div>
-            <button>Sing In!</button>
+            <button [disabled]="!myForm.valid">Sing In!</button>
         </form>
     </div>
 </div>
