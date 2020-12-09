@@ -30,7 +30,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     RouterModule,
     RouterModule.forRoot([
       { path: '', redirectTo: 'login', pathMatch: 'full' },
-      { path: 'login', component: LoginComponent, canActivate: [AuthGuard] },
+      { path: 'login', component: LoginComponent },
       { path: 'news-list', component: NewsListComponent, canActivate: [AuthGuard] },
       { path: 'open-news', component: OpenNewsComponent, canActivate: [AuthGuard] },
       { path: '**', component: NotFoundComponent},

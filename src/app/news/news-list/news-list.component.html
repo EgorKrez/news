@@ -1,4 +1,4 @@
-<div class="content">
+ <div class="content">
     <header>
         <h1 *ngIf="!isShowFavorites" (click)="showFavorites()">Favorites</h1>
         <h1 *ngIf="isShowFavorites" (click)="showFavorites()">All news</h1>
@@ -28,6 +28,5 @@
 
 <div class="noNews" *ngIf='p.length == 0'>
     <h1>You have no news!</h1>
-</div>
+</div> 
 
-<h1>{{this.newsService.getNews()}}</h1>

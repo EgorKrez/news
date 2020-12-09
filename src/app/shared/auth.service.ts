@@ -13,6 +13,7 @@ export class AuthService {
   constructor(private router: Router) { }
 
   public get logIn(): boolean {
+    console.log(localStorage.getItem('auth_token') !== null);
     return (localStorage.getItem('auth_token') !== null);
   }
 
