@@ -139,3 +139,34 @@ header h1:hover {
     justify-content: center;
     align-items: center;
 }
+@media(max-width: 650px) {
+    header {
+        font-size: 10px;
+    }
+    .header-block h1 {
+        margin-top: 10px;
+    }
+
+}
+@media(max-width: 480px) {
+    .filter-title {
+        width: 65%;
+    }
+    .add-button{
+        width: 35%;
+    }
+    input {
+        width: 60%;
+    }
+    .filter-title button {
+        width: 30%;
+    }
+    .add-button button {
+        width: 80%;
+    }
+}
+@media(max-width: 400px) {
+    .filter-title button {
+        display: none;
+    }
+}
