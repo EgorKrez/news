@@ -1,25 +1,132 @@
+/*
+red: #dc3546
+gray: #353a40
+silver: #6c757e
+black: #35383d
+white: #f8f9fb
+*/
+body, html {
+    margin: 0;
+    background-color: #f8f9fb;
+    font-family: Arial;
+}
 .content {
-    width: 100%;
+    height: 100%;
+    height: 100%;
+    background-color: #f8f9fb;
+}
+header {
     height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  #dc3546;
+}
+header h1 {
+    outline: none;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+}
+.header-block {
+    height: 50px;
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header-block-user {
+    height: 50px;
+    width: 100px;
+}
+.header-block button {
+    height: 36px;
+    width: 100px;
+    border: 2px solid #b8222f;
+    border-radius: 5px;
+    background-color: #b8222f;
+    text-align: center;
+    outline: none;
+    margin-right: 10px;
+    color: white;
+}
+.header-block button:hover {
+    cursor: pointer;
+}
+.header-block h1 {
+    margin-top: 5px;
+    color: white;
+}
+.title {
+    height: 50px;
+    width: 100%;
+    background-color: #353a40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.title h1 {
+    font-weight: 200;
+}
+.filter {
+    height: 50px;
+    width: 100%;
+    background-color: #f8f9fb;
+    display: flex;
+    justify-content: space-between;
+}
+.filter button:hover {
+    cursor: pointer;
+}
+.filter-title {
+    height: 50px;
+    width: 350px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.add-button {
+    height: 50px;
+    width: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-header {
-    height: 50px;
-    width: 800px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.add-button button{
+    height: 36px;
+    width: 150px;
+    border: 2px solid #d3a2ab;
+    color: #d3a2ab;
+    text-align: center;
+    outline: none;
+    border-radius: 5px;
+}
+.filter-title input{
+    height: 30px;
+    width: 200px;
+    padding-left: 5px;
+    border: 3px solid #cde0ef;
+    outline: none;
+}
+.filter-title button{
+    height: 36px;
+    width: 70px;
+    border: 2px solid #d3a2ab;
+    color: #d3a2ab;
+    text-align: center;
+    outline: none;
+    border-radius: 5px;
 }
 button {
     height: 30px;
     width: 100px;
 }
-header h1 {
-    border: 2px solid silver;
-    border-radius: 5px;
+.header-text h1 {
     padding: 5px;
+    color: white;
 }
 header h1:hover {
     cursor: pointer;

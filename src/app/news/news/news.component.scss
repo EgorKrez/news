@@ -1,4 +1,4 @@
-.content {
+/* .content {
     height: 100%;
     width: 100%;
     display: flex;
@@ -59,4 +59,116 @@ footer button {
 }
 footer button:hover {
     cursor: pointer;
+}
+ */
+.content {
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.news {
+    height: 250px;
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+.img-wrapper {
+    height: 250px;
+    width: 350px;
+}
+.img-wrapper img {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #a8abad;
+}
+.text-block {
+    height: 250px;
+    width: 45%;
+    margin-left: 20px;
+}
+.title {
+    height: 65px;
+    width: 100%;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+.title a {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Arial;
+    color: #454e53;
+}
+.description {
+    height: 100px;
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 20px;
+    display: flex;
+    overflow: hidden;
+}
+.description a {
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Arial;
+    color: #454e53;
+}
+.text-block-button {
+    height: 65px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.text-block-button button{
+    height: 36px;
+    width: 100px;
+    background-color: #35383d;
+    margin-left: 10px;
+    border-radius: 5px;
+    outline: none;
+    color: white;
+    font-family: Arial;
+}
+.text-block-button button{
+    cursor: pointer;
+}
+.date-block {
+    height: 250px;
+    width: 10%;
+}
+.date-block h1 {
+    font-size: 15px;
+    text-align: center;
+    font-family: Arial;
+    font-weight: 200;
+}
+.buttons {
+    height: 250px;
+    width: 15%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.buttons button {
+    height: 30px;
+    width: 80%;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+.buttons button:hover {
+    cursor: pointer;
+}
+#red {
+    background-color: #dc3546;
+}
+#black {
+    background-color: #6c757e;
 }

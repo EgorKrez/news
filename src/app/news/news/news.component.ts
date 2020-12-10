@@ -15,15 +15,15 @@ export class NewsComponent implements OnInit {
   @Input() description: string;
   @Input() isFavorite: boolean;
   @Input() urlToImage: string;
-  @Input() publishedAt: string;
+  @Input() publishedAt: Date;
   @Input() content: string;
 
 
   constructor(public newsService: NewsService, public authService: AuthService) { }
 
   ngOnInit(): void {
-    this.newsService.getNews().subscribe((data) => this.newsService.news = data);
-    console.log('ngOnInit');
+    /* this.newsService.getNews().subscribe((data) => this.newsService.news = data);
+    console.log('ngOnInit'); */
   }
 
   addToFavorites(): void {

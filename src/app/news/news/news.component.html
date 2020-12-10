@@ -1,4 +1,4 @@
-<div class="content">
+<!-- <div class="content">
     <div class="post">
         <header>
             <h1>{{name}}</h1>
@@ -16,5 +16,29 @@
             <button *ngIf="isFavorite" id="button" (click)="addToFavorites()">Remove from favorites</button>
             <button *ngIf="this.authService.isAdmin" (click)="removeNews(id)">Remove news</button>
         </footer>
+    </div>
+</div> -->
+<div class="content">
+    <div class="news">
+        <div class="img-wrapper">
+            <img src="{{urlToImage}}" alt="">
+        </div>
+        <div class="text-block">
+            <div class="title"><a>{{name}}</a></div>
+            <div class="description"><a>{{description}}</a></div>
+            <div class="text-block-button">
+                <button>Read more</button>
+            </div>
+        </div>
+        <div class="date-block">
+            <h1>{{author}}</h1>
+            <h1>{{publishedAt | date:'mediumDate'}}</h1>
+        </div>
+        <div class="buttons">
+            <button id="black">Edit</button>
+            <button id="red" (click)='removeNews(id)'>Delete</button>
+            <button id="black" *ngIf='!isFavorite' (click)='addToFavorites()'>Add to Favorites</button>
+            <button id="black" *ngIf='isFavorite' (click)='addToFavorites()'>Remove to Favorites</button>
+        </div>
     </div>
 </div>
