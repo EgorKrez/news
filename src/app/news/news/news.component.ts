@@ -41,4 +41,7 @@ export class NewsComponent implements OnInit {
     }
   }
 
+  editNews(id): void {
+    this.authService.editNews(id);
+  }
 }

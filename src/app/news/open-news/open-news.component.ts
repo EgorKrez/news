@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/shared/auth.service';
 import { NewsService } from 'src/app/shared/news.service';
+import { NewsComponent } from '../news/news.component';
 
 @Component({
   selector: 'app-open-news',
@@ -16,6 +17,10 @@ export class OpenNewsComponent implements OnInit {
 
   showNews(): void {
     this.authService.showNews();
+  }
+
+  addToFavorites(): void {
+    this.newsService.news[this.authService.checkId - 1].isFavorite = !this.newsService.news[this.authService.checkId - 1].isFavorite;
   }
 
 }

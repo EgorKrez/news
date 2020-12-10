@@ -44,4 +44,13 @@ export class AuthService {
     this.router.navigate(['news-list']);
   }
 
+  addNews(): void {
+    this.router.navigate(['add']);
+  }
+
+  editNews(id): void {
+    this.router.navigate(['edit']);
+    this.checkId = id;
+  }
+
 }

@@ -21,7 +21,7 @@
             <button>Filter</button>
         </div>
         <div class="add-button">
-            <button>Add Article</button>
+            <button (click)='this.authService.addNews()'>Add Article</button>
         </div>
     </div>
     <div *ngIf="!isShowFavorites">
@@ -41,7 +41,7 @@
                 [content]='item.content'>
             </app-news>
         </div>
-        <div class="noNews" *ngIf="!ifFavorites()">
+        <div class="noNews" *ngIf="!ifFavorites() && p.length !== 0">
             <h1>You have no favorites!</h1>
         </div>
     </div>

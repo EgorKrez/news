@@ -12,6 +12,8 @@ import { OpenNewsComponent } from './news/open-news/open-news.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthGuard } from './shared/auth-guard';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AddComponent } from './news/add/add.component';
+import { EditComponent } from './news/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     NewsListComponent,
     NewsComponent,
     LoginComponent,
-    OpenNewsComponent
+    OpenNewsComponent,
+    AddComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +37,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
       { path: 'login', component: LoginComponent },
       { path: 'news-list', component: NewsListComponent, canActivate: [AuthGuard] },
       { path: 'open-news', component: OpenNewsComponent, canActivate: [AuthGuard] },
+      { path: 'add', component: AddComponent, canActivate: [AuthGuard] },
+      { path: 'edit', component: EditComponent, canActivate: [AuthGuard] },
       { path: '**', component: NotFoundComponent},
     ]),
   ],
