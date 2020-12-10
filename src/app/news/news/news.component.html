@@ -35,7 +35,7 @@
             <h1>{{publishedAt | date:'mediumDate'}}</h1>
         </div>
         <div class="buttons">
-            <button id="black" (сlick)='this.authService.editNews(id)'>Edit</button>
+            <button (click)='this.authService.editNews(id)' id="black">Edit</button>
             <button id="red" (click)='removeNews(id)'>Delete</button>
             <button id="black" *ngIf='!isFavorite' (click)='addToFavorites()'>Add to Favorites</button>
             <button id="black" *ngIf='isFavorite' (click)='addToFavorites()'>Remove to Favorites</button>
@@ -43,7 +43,7 @@
     </div>
 </div>
 <div class="low">
-    <button id="black" class="first" (сlick)='editNews(id)'>Edit</button>
+    <button (click)='this.authService.editNews(id)' id="black" class="first">Edit</button>
             <button id="red" (click)='removeNews(id)'>Delete</button>
             <button id="black" *ngIf='!isFavorite' (click)='addToFavorites()'>Add to Favorites</button>
             <button id="black" *ngIf='isFavorite' (click)='addToFavorites()'>Remove to Favorites</button>
