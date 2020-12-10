@@ -61,6 +61,9 @@ footer button:hover {
     cursor: pointer;
 }
  */
+ body, html {
+    margin: -8px;
+ }
 .content {
     height: 250px;
     width: 100%;
@@ -238,5 +241,28 @@ footer button:hover {
         display: flex;
         align-items: center;
         justify-content: flex-start;
+    }
+}
+@media(max-width: 480px) {
+    .news {
+        height: 160px;
+    }
+    .title {
+        height: 40px;
+    }
+    .title a {
+        font-size: 14px;
+    }
+    .description {
+        height: 70px;
+    }
+    .description a {
+        font-size: 13px;
+    }
+}
+
+@media(max-width: 400px) {
+    .img-wrapper {
+        height: 120px;
     }
 }

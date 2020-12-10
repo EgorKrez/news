@@ -6,7 +6,7 @@ black: #35383d
 white: #f8f9fb
 */
 body, html {
-    margin: 0;
+    margin: -8px;
     background-color: #f8f9fb;
     font-family: Arial;
 }
@@ -23,7 +23,7 @@ header {
     align-items: center;
     background-color:  #dc3546;
 }
-header h1 {
+.header-text h1 {
     outline: none;
     border: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -57,6 +57,8 @@ header h1 {
 .header-block h1 {
     margin-top: 5px;
     color: white;
+    font-family: Arial;
+    font-weight: 200;
 }
 .title {
     height: 50px;
@@ -144,9 +146,8 @@ header h1:hover {
         font-size: 10px;
     }
     .header-block h1 {
-        margin-top: 10px;
+        margin-top: 14px;
     }
-
 }
 @media(max-width: 480px) {
     .filter-title {
@@ -163,6 +164,15 @@ header h1:hover {
     }
     .add-button button {
         width: 80%;
+    }
+    .header-block {
+        justify-content: flex-end;
+    }
+    .header-block button {
+        margin-left: -20px;
+    }
+    .header-block h1 {
+        margin-left: 10px;
     }
 }
 @media(max-width: 400px) {
