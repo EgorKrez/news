@@ -18,7 +18,6 @@
     <div class="filter">
         <div class="filter-title">
             <input type="text" placeholder="Title filter..." [(ngModel)]='searchString'>
-            <button (click) = 'showString()'>Filter</button>
         </div>
         <div class="add-button">
             <button (click)='this.authService.addNews()'>Add Article</button>
@@ -50,3 +49,4 @@
         <h1>You have no news!</h1>
     </div>
 </div>
+<div class="space"></div>
