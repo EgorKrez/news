@@ -13,8 +13,13 @@ export class NewsListComponent implements OnInit {
 
   public isShowFavorites = false;
   public p: News[] = this.newsService.news;
+  public searchString = '';
 
   ngOnInit(): void {
+  }
+
+  showString(): void {
+    console.log(this.searchString);
   }
 
 

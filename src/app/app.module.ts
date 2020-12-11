@@ -14,6 +14,7 @@ import { AuthGuard } from './shared/auth-guard';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AddComponent } from './news/add/add.component';
 import { EditComponent } from './news/edit/edit.component';
+import { NewsFilterPipe } from './shared/news-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { EditComponent } from './news/edit/edit.component';
     LoginComponent,
     OpenNewsComponent,
     AddComponent,
-    EditComponent
+    EditComponent,
+    NewsFilterPipe
   ],
   imports: [
     BrowserModule,

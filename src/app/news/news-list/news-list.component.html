@@ -17,15 +17,15 @@
     </div>
     <div class="filter">
         <div class="filter-title">
-            <input type="text" placeholder="Title filter...">
-            <button>Filter</button>
+            <input type="text" placeholder="Title filter..." [(ngModel)]='searchString'>
+            <button (click) = 'showString()'>Filter</button>
         </div>
         <div class="add-button">
             <button (click)='this.authService.addNews()'>Add Article</button>
         </div>
     </div>
     <div *ngIf="!isShowFavorites">
-        <div *ngFor="let item of p">
+        <div *ngFor="let item of p | newsFilter: searchString">
             <app-news [id]='item.source.id' [name]='item.source.name' [author]='item.author' [title]='item.title'
                 [description]='item.description' [isFavorite]='item.isFavorite' [urlToImage]='item.urlToImage'
                 [publishedAt]='item.publishedAt' [content]='item.content'>
@@ -34,7 +34,7 @@
     </div>
 
     <div *ngIf="isShowFavorites">
-        <div *ngFor="let item of p">
+        <div *ngFor="let item of p | newsFilter: searchString">
             <app-news *ngIf='item.isFavorite === true' [id]='item.source.id' [name]='item.source.name'
                 [author]='item.author' [title]='item.title' [description]='item.description'
                 [isFavorite]='item.isFavorite' [urlToImage]='item.urlToImage' [publishedAt]='item.publishedAt'
