@@ -12,12 +12,14 @@ export class NewsListComponent implements OnInit {
   constructor(public newsService: NewsService, public authService: AuthService) { }
 
   public isShowFavorites = false;
+  // TODO: make normal naming for variables.
   public p: News[] = this.newsService.news;
   public searchString = '';
 
   ngOnInit(): void {
   }
 
+  // TODO: remove after finishing development process.
   showString(): void {
     console.log(this.searchString);
   }
@@ -34,18 +36,18 @@ export class NewsListComponent implements OnInit {
 
   ifFavorites(): boolean {
     let counter = 0;
-    // tslint:disable-next-line:prefer-for-of
-    for (let i = 0; i < this.newsService.news.length; i++) {
-      if (this.newsService.news[i].isFavorite === true) {
+    /* for (let i = 0; i < this.newsService.news.length; i++) {
+      if (this.newsService.news[i].isFavorite) {
+        counter++;
+      }
+    } */
+    // TODO: replace to reduce method
+    for (let item of this.newsService.news) {
+      if (item.isFavorite) {
         counter++;
       }
     }
-    if (counter === 0) {
-      return false;
-    }
-    else {
-      return true;
-    }
+    return (counter !== 0);
   }
 
 }

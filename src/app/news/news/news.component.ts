@@ -22,6 +22,7 @@ export class NewsComponent implements OnInit {
   constructor(public newsService: NewsService, public authService: AuthService) { }
 
   ngOnInit(): void {
+    // TODO: remove after finishing development process;
     /* this.newsService.getNews().subscribe((data) => this.newsService.news = data);
     console.log('ngOnInit'); */
   }
@@ -30,18 +31,18 @@ export class NewsComponent implements OnInit {
     this.newsService.news[this.id - 1].isFavorite = !this.newsService.news[this.id - 1].isFavorite;
   }
 
-  openNews(id): void {
+  openNews(id: number): void {
     this.authService.openNews(id);
   }
 
-  removeNews(id): void {
+  removeNews(id: number): void {
     this.newsService.news.splice(id - 1, 1);
     for (let i = id - 1; i < this.newsService.news.length; i++) {
     this.newsService.news[i].source.id = this.newsService.news[i].source.id - 1;
     }
   }
 
-  editNews(id): void {
+  editNews(id: number): void {
     this.authService.editNews(id);
   }
 }

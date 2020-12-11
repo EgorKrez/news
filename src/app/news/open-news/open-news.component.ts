@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/shared/auth.service';
 import { NewsService } from 'src/app/shared/news.service';
-import { NewsComponent } from '../news/news.component';
 
 @Component({
   selector: 'app-open-news',
@@ -11,7 +10,7 @@ import { NewsComponent } from '../news/news.component';
 export class OpenNewsComponent implements OnInit {
 
   constructor(public newsService: NewsService, public authService: AuthService) { }
-
+  // TODO: remove this keyword in the template;
   ngOnInit(): void {
   }
 

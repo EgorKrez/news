@@ -7,7 +7,7 @@
             <div class="title"><a>{{name}}</a></div>
             <div class="description"><a>{{title}}</a></div>
             <div class="text-block-button">
-                <button (click)='openNews(id)'>Read more</button>
+                <button (click)='openNews(id)'>Read news</button>
             </div>
         </div>
         <div class="date-block">
@@ -18,7 +18,7 @@
             <button (click)='this.authService.editNews(id)' id="black">Edit</button>
             <button id="red" (click)='removeNews(id)'>Delete</button>
             <button id="black" *ngIf='!isFavorite' (click)='addToFavorites()'>Add to Favorites</button>
-            <button id="black" *ngIf='isFavorite' (click)='addToFavorites()'>Remove to Favorites</button>
+            <button id="black" *ngIf='isFavorite' (click)='addToFavorites()'>Remove from Favorites</button>
         </div>
     </div>
 </div>

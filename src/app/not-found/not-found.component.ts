@@ -11,5 +11,6 @@ export class NotFoundComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  // TODO: in html file. Find image and download it to the asssets folder nad use this img from it.
 
 }

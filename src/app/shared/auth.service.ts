@@ -17,7 +17,7 @@ export class AuthService {
     return (localStorage.getItem('auth_token') !== null);
   }
 
-  LogIn(login, password): void {
+  LogIn(login: string, password: string): void {
     if (login === 'admin' && password === 'admin') {
       this.isAdmin = true;
       this.router.navigate(['news-list']);
@@ -35,7 +35,7 @@ export class AuthService {
     this.router.navigate(['login']);
   }
 
-  openNews(id): void {
+  openNews(id: number): void {
     this.router.navigate(['open-news']);
     this.checkId = id;
   }
@@ -48,7 +48,7 @@ export class AuthService {
     this.router.navigate(['add']);
   }
 
-  editNews(id): void {
+  editNews(id: number ): void {
     this.router.navigate(['edit']);
     this.checkId = id;
   }
