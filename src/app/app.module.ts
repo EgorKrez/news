@@ -16,7 +16,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { AddComponent } from './news/add/add.component';
 import { EditComponent } from './news/edit/edit.component';
 import { NewsFilterPipe } from './shared/news-filter.pipe';
-// TODO: make separe module for auth and news
+
 @NgModule({
   declarations: [
     AppComponent,

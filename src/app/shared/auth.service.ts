@@ -38,7 +38,6 @@ export class AuthService {
       localStorage.setItem("auth_token", jwt.jwt);
       this.router.navigate(['news-list']);
     } else {
-      console.log('user unauthorized')
       this.router.navigate(['login']);
     }
   }

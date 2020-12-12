@@ -10,8 +10,6 @@ import { NewsService } from 'src/app/shared/news.service';
 export class OpenNewsComponent implements OnInit {
 
   constructor(public newsService: NewsService, public authService: AuthService) { }
-  // TODO: remove this keyword in the template;
-  // TODO: add button like 'back to home page'
   ngOnInit(): void {
   }
 

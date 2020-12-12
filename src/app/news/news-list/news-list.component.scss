@@ -1,19 +1,13 @@
-/*
-red: #dc3546
-gray: #353a40
-silver: #6c757e
-black: #35383d
-white: #f8f9fb
-*/
+@import '../../../styles.scss';
 body, html {
     margin: -8px;
-    background-color: #f8f9fb;
+    background-color:$white;
     font-family: Arial;
 }
 .content {
     height: 100%;
     height: 100%;
-    background-color: #f8f9fb;
+    background-color:$white;
 }
 header {
     height: 50px;
@@ -21,7 +15,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:  #dc3546;
+    background-color:  $red;
 }
 .header-text h1 {
     outline: none;
@@ -63,7 +57,7 @@ header {
 .title {
     height: 50px;
     width: 100%;
-    background-color: #353a40;
+    background-color: $gray;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,7 +70,7 @@ header {
 .filter {
     height: 50px;
     width: 100%;
-    background-color: #f8f9fb;
+    background-color:$white;
     display: flex;
     justify-content: space-between;
 }
@@ -183,5 +177,5 @@ header h1:hover {
 .space {
     height: 50px;
     width: 100%;
-    background-color: #f8f9fb;
+    background-color:$white;
 }

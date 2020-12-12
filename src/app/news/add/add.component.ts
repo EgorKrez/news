@@ -39,7 +39,6 @@ export class AddComponent implements OnInit {
     });
   }
 
-  // TODO: All CRUD oprtation move to service layer
   pushNews(): void {
     this.newNews = {
       source: {

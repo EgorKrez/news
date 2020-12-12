@@ -28,7 +28,6 @@ export class NewsService {
   }
 
   fetchNews(): void {
-    console.log('fetchNews');
     this.http.get<News[]>(this.NEWS_URL).subscribe(data => {
       this.news = data;
     });

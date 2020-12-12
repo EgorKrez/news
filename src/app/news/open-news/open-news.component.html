@@ -18,8 +18,17 @@
 
 <div class="content">
     <div class="post">
-        <button *ngIf='this.newsService.news[this.authService.checkId - 1].isFavorite === false' id="button">Add to favorites</button>
-        <button *ngIf='this.newsService.news[this.authService.checkId - 1].isFavorite' id="button">Remove from favorites</button>
+        <div class="posts-buttons">
+            <button *ngIf='!this.newsService.news[this.authService.checkId - 1].isFavorite' class="posts-button"
+                (click)='addToFavorites()'>Add to
+                favorites</button>
+            <button *ngIf='this.newsService.news[this.authService.checkId - 1].isFavorite' class="posts-button"
+                (click)='addToFavorites()'>Remove
+                from
+                favorites </button>
+            <button class="posts-button" (click)='authService.showNews()'>Show News</button>
+        </div>
+
         <div class="title-post">
             <h3>{{this.newsService.news[this.authService.checkId - 1].title}}</h3>
         </div>

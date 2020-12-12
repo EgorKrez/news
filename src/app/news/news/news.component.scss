@@ -1,3 +1,4 @@
+@import '../../../styles.scss';
 .content {
     height: 250px;
     width: 100%;
@@ -64,7 +65,7 @@
 .text-block-button button{
     height: 36px;
     width: 100px;
-    background-color: #35383d;
+    background-color: $black;
     margin-left: 10px;
     border-radius: 5px;
     outline: none;
@@ -105,10 +106,10 @@
     cursor: pointer;
 }
 #red {
-    background-color: #dc3546;
+    background-color: $red;
 }
 #black {
-    background-color: #6c757e;
+    background-color: $silver;
 }
 
 @media(max-width: 900px) {

@@ -28,12 +28,7 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  submit(form: NgForm): void {
-    console.log(form);
-  }
-
   Login(): void{
-    console.log(this.login, this.password);
     this.authService.LogIn(this.login, this.password);
   }
 }

@@ -18,7 +18,7 @@ export class JwtService {
       }).join(''));
       return JSON.parse(jsonPayload).username;
     } catch (error) {
-      console.log('getUsernameFromJWT err:', error)
+      console.log('getUsernameFromJWT err:', error);
       return null;
     }
   }
