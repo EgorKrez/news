@@ -1,0 +1,30 @@
+<div class="content">
+  <div class="news">
+    <div class="img-wrapper">
+      <img src="{{urlToImage}}" alt="">
+    </div>
+    <div class="text-block">
+      <div class="title"><a>{{name}}</a></div>
+      <div class="description"><a>{{title}}</a></div>
+      <div class="text-block-button">
+        <button (click)='openNews(id)'>Read news</button>
+      </div>
+    </div>
+    <div class="date-block">
+      <h1>{{author}}</h1>
+      <h1>{{publishedAt | date:'mediumDate'}}</h1>
+    </div>
+    <div class="buttons">
+      <button *ngIf='authService.isAdmin' (click)='this.authService.editNews(id)' id="black">Edit</button>
+      <button *ngIf='authService.isAdmin' id="red" (click)='removeNews(id)'>Delete</button>
+      <button id="black" *ngIf='!isFavorite' (click)='addToFavorites()'>Add to Favorites</button>
+      <button id="black" *ngIf='isFavorite' (click)='addToFavorites()'>Remove from Favorites</button>
+    </div>
+  </div>
+</div>
+<div class="low">
+  <button *ngIf='authService.isAdmin' (click)='this.authService.editNews(id)' id="black" class="first">Edit</button>
+  <button *ngIf='authService.isAdmin' id="red" (click)='removeNews(id)'>Delete</button>
+  <button id="black" *ngIf='!isFavorite' (click)='addToFavorites()'>Add to Favorites</button>
+  <button id="black" *ngIf='isFavorite' (click)='addToFavorites()'>Remove to Favorites</button>
+</div>

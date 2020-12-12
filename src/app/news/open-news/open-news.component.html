@@ -1,0 +1,32 @@
+<div class="content-head">
+    <header>
+        <div class="header-text">
+            <h1>News</h1>
+        </div>
+        <div class="header-block">
+            <div class="header-block-user">
+                <h1>Admin</h1>
+            </div>
+            <button (click)='this.authService.LogOut()'>Log Out</button>
+        </div>
+    </header>
+    <div class="title">
+        <h1>News Site</h1>
+    </div>
+</div>
+
+
+<div class="content">
+    <div class="post">
+        <button *ngIf='this.newsService.news[this.authService.checkId - 1].isFavorite === false' id="button">Add to favorites</button>
+        <button *ngIf='this.newsService.news[this.authService.checkId - 1].isFavorite' id="button">Remove from favorites</button>
+        <div class="title-post">
+            <h3>{{this.newsService.news[this.authService.checkId - 1].title}}</h3>
+        </div>
+        <img src="{{newsService.news[authService.checkId - 1].urlToImage}}" alt="">
+        <div class="content-block">
+            <h3 id='date'>{{this.newsService.news[this.authService.checkId - 1].publishedAt | date:'mediumDate'}}</h3>
+            <h3>{{this.newsService.news[this.authService.checkId - 1].content}}</h3>
+        </div>
+    </div>
+</div>

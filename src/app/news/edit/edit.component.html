@@ -1,0 +1,59 @@
+<div class="content">
+    <header>
+        <div class="header-text">
+            <h1>News</h1>
+        </div>
+        <div class="header-block">
+            <div class="header-block-user">
+                <!-- <h1>User</h1> -->
+                <h1>Admin</h1>
+            </div>
+            <button (click)='this.authService.LogOut()'>Log Out</button>
+        </div>
+    </header>
+    <div class="title">
+        <h1>News Site</h1>
+    </div>
+</div>
+
+
+<div class="content">
+    <div class="add">
+        <form class="ng-pristine ng-untouched ng-valid" novalidate #myForm="ngForm" [formGroup]="addForm"
+            (ngSubmit)="pushNews()">
+            <h1>Edit news</h1>
+            <div class="form-group">
+                <h5>Name</h5>
+                <input type="text" placeholder="name" class="form-control" formControlName="name" [(ngModel)]="name"
+                    required minlength="4" >
+            </div>
+            <div class="form-group">
+                <h5>Title</h5>
+                <input type="text" placeholder="title" class="form-control" formControlName="title" [(ngModel)]="title"
+                    required minlength="4" >
+            </div>
+            <div class="form-group">
+                <h5>Author</h5>
+                <input type="text" placeholder="author" class="form-control" formControlName="author"
+                    [(ngModel)]="author" required minlength="4" >
+            </div>
+            <div class="form-group">
+                <h5>Description</h5>
+                <input type="text" placeholder="description" class="form-control" formControlName="description"
+                    [(ngModel)]="description" required minlength="4" >
+            </div>
+            <div class="form-group">
+                <h5>Photo url</h5>
+                <input type="text" placeholder="url" class="form-control" formControlName="url" [(ngModel)]="url"
+                    required minlength="4" >
+            </div>
+            <div class="form-group">
+                <h5>Content</h5>
+                <input type="text" placeholder="content" class="form-control" formControlName="content"
+                    [(ngModel)]="content" required minlength="4" >
+            </div>
+            <button [disabled]="!myForm.valid">Edit News</button>
+            <button (click)='this.authService.showNews();'>All news</button>
+        </form>
+    </div>
+</div>
